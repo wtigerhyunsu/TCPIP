@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">manageapp</string>
-    <string name="msg_token_fmt">ID:%s</string>
-
+    <string name="app_name">ManageApp</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token : %s</string>
 </resources>

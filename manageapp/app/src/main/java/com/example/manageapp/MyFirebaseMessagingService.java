@@ -1,14 +1,12 @@
 package com.example.manageapp;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.os.Build;
+import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,45 +20,55 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     String TAG = "===";
 
-    String msg, title;
+    String carId, control, data;
 
     NotificationManagerCompat notificationManager;
-
 
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
 
 
-        title = remoteMessage.getNotification().getTitle();
-        msg = remoteMessage.getNotification().getBody();
+        carId = remoteMessage.getNotification().getTitle();
+//        msg = remoteMessage.getNotification().getBody();
 
-        Log.d(TAG, "title : " + title + " msg : " + msg);
+        control = remoteMessage.getData().get("control");
+        data = remoteMessage.getData().get("data");
 
-
-        String channelId = "channel";
-        String channelName = "Channel_name";
-        int importance = NotificationManager.IMPORTANCE_LOW;
+        Log.d(TAG, "carId : " + carId + " | control : " + control + " | data : " + data);
 
 
-        notificationManager = NotificationManagerCompat.from(this);
+        Intent intent = new Intent("filter_string");
+        // put your all data using put extra
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel mChannel = new NotificationChannel(channelId, channelName, importance);
-            notificationManager.createNotificationChannel(mChannel);
-        }
+        intent.putExtra("carId", carId);
+        intent.putExtra("control", control);
+        intent.putExtra("data", data);
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, channelId)
-                .setSmallIcon(R.drawable.common_google_signin_btn_icon_dark)
-                .setContentTitle(title)
-                .setContentText(msg)
-                .setAutoCancel(true)
-                .setVibrate(new long[]{1, 1000});
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
 
-        notificationManager.notify(0, mBuilder.build());
+
+//        String channelId = "channel";
+//        String channelName = "Channel_name";
+//        int importance = NotificationManager.IMPORTANCE_LOW;
+//
+//
+//        notificationManager = NotificationManagerCompat.from(this);
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            NotificationChannel mChannel = new NotificationChannel(channelId, channelName, importance);
+//            notificationManager.createNotificationChannel(mChannel);
+//        }
+//
+//        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this, channelId)
+//                .setSmallIcon(R.drawable.ioticon)
+//                .setContentTitle(title)
+//                .setContentText(msg)
+//                .setAutoCancel(true)
+//                .setVibrate(new long[]{1, 1000});
+//
+//        notificationManager.notify(0, mBuilder.build());
     }
-
-
 
 
     @Override

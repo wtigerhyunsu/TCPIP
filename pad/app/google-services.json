@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "95804468042",
-    "firebase_url": "https://fourth-physics-267302.firebaseio.com",
-    "project_id": "fourth-physics-267302",
-    "storage_bucket": "fourth-physics-267302.appspot.com"
+    "project_number": "368628767588",
+    "firebase_url": "https://iotmanagesystem.firebaseio.com",
+    "project_id": "iotmanagesystem",
+    "storage_bucket": "iotmanagesystem.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:95804468042:android:11ef3541d7d89f81092fb3",
+        "mobilesdk_app_id": "1:368628767588:android:f95f8902ebee86c315f871",
         "android_client_info": {
           "package_name": "com.example.manageapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "95804468042-pc063gcfo0i7tq05nrodgmh2de97a51i.apps.googleusercontent.com",
+          "client_id": "368628767588-ikijfmokioun0u0fa7h8mc083vje9u9j.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD3R27L6deaWYGK4LDFfF0ltAWYjAwidso"
+          "current_key": "AIzaSyAeck-Txyo7dIcDvsQGpFyMhsqeeiqnyVk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "95804468042-pc063gcfo0i7tq05nrodgmh2de97a51i.apps.googleusercontent.com",
+              "client_id": "368628767588-ikijfmokioun0u0fa7h8mc083vje9u9j.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -37,27 +37,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:95804468042:android:c9d87dd8f7d288c4092fb3",
+        "mobilesdk_app_id": "1:368628767588:android:48d53352b0d0222d15f871",
         "android_client_info": {
           "package_name": "com.example.pad"
         }
       },
       "oauth_client": [
         {
-          "client_id": "95804468042-pc063gcfo0i7tq05nrodgmh2de97a51i.apps.googleusercontent.com",
+          "client_id": "368628767588-ikijfmokioun0u0fa7h8mc083vje9u9j.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD3R27L6deaWYGK4LDFfF0ltAWYjAwidso"
+          "current_key": "AIzaSyAeck-Txyo7dIcDvsQGpFyMhsqeeiqnyVk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "95804468042-pc063gcfo0i7tq05nrodgmh2de97a51i.apps.googleusercontent.com",
+              "client_id": "368628767588-ikijfmokioun0u0fa7h8mc083vje9u9j.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
